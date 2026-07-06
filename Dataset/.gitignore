@@ -1,0 +1,16 @@
+# Ignore large raw files
+raw/*.jsonl
+!raw/.gitkeep
+
+# Ignore built processed files (optional – can be regenerated)
+processed/full_corpus.parquet
+processed/preprocessed_texts.parquet
+processed/dataset_manifest.json
+
+# Ignore annotation exports (if large)
+annotations/label_studio_export.json
+
+# But keep sample and guidelines
+!sample/
+!annotations/annotation_guidelines.md
+!annotations/final_labels.csv   # if small enough
