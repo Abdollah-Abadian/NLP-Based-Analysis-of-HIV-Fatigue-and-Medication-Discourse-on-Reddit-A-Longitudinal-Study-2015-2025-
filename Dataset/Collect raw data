@@ -1,0 +1,9 @@
+python -m src.data_collection.arctic_shift_collector --subreddit hivaids --start 2015-01-01 --end 2023-12-31 --output data/raw/arctic_shift_hivaids.jsonl
+python -m src.data_collection.arctic_shift_collector --subreddit hiv --start 2015-01-01 --end 2023-12-31 --output data/raw/arctic_shift_hiv.jsonl
+
+python -m src.data_collection.pushshift_collector --input data/raw/arctic_shift_hivaids.jsonl --output data/raw/pushshift_patched_hivaids.jsonl
+python -m src.data_collection.pushshift_collector --input data/raw/arctic_shift_hiv.jsonl --output data/raw/pushshift_patched_hiv.jsonl
+
+# For 2023-2025 (requires Reddit API credentials)
+python -m src.data_collection.praw_collector --subreddit hivaids --start 2023-01-01 --end 2025-12-31 --output data/raw/praw_hivaids_2023_2025.jsonl
+python -m src.data_collection.praw_collector --subreddit hiv --start 2023-01-01 --end 2025-12-31 --output data/raw/praw_hiv_2023_2025.jsonl
