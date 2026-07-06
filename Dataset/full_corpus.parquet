@@ -1,0 +1,15 @@
+{
+  "id": "t3_xyz789",
+  "subreddit": "hivaids",
+  "record_type": "post",
+  "year": 2021,
+  "month": 6,
+  "created_utc": 1623456789.0,
+  "score": 45,
+  "num_comments": 12,
+  "author": "user_anonymised",
+  "original_text": "I'm so tired on Biktarvy, I can't get out of bed.",
+  "cleaned_text": "tired biktarvy get bed",
+  "word_count": 5,
+  "metadata_source": "praw_official_api"
+}
