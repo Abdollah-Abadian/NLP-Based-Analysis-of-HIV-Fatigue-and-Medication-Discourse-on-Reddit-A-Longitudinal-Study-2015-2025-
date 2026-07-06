@@ -1,0 +1,22 @@
+data:
+  raw_files:
+    - "data/raw/arctic_shift_hivaids.jsonl"
+    - "data/raw/pushshift_patched_hivaids.jsonl"
+    - "data/raw/praw_hivaids_2023_2025.jsonl"
+  annotation_file: "data/annotations/labels.csv"
+
+output_dir: "outputs"
+
+model:
+  roberta: "roberta-base"
+  max_seq_len: 512
+  batch_size: 16
+  learning_rate: 2e-5
+  epochs: 10
+  patience: 3
+
+topic_model:
+  min_topic_size: 50
+  umap_neighbors: 15
+  umap_components: 5
+  hdbscan_epsilon: 0.1
