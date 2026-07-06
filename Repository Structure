@@ -1,0 +1,37 @@
+hiv-reddit-nlp/
+├── README.md
+├── requirements.txt
+├── setup.py
+├── config/
+│   └── default.yaml
+├── data/
+│   ├── raw/                # (placeholders – actual data collected separately)
+│   ├── processed/          # cleaned, lemmatised texts
+│   ├── annotations/        # LabelStudio export (JSON) and final CSV labels
+│   └── sample/             # small sample for testing
+│       └── sample_posts.jsonl
+├── src/
+│   ├── data_collection/
+│   │   ├── arctic_shift_collector.py
+│   │   ├── pushshift_collector.py
+│   │   └── praw_collector.py
+│   ├── preprocessing/
+│   │   ├── preprocess.py
+│   │   └── utils.py
+│   ├── annotation/
+│   │   ├── export_labels.py
+│   │   └── label_mapping.py
+│   ├── modeling/
+│   │   ├── topic_modeling.py
+│   │   ├── classifier.py
+│   │   └── baselines.py
+│   ├── evaluation/
+│   │   ├── evaluate.py
+│   │   ├── explain.py
+│   │   └── metrics.py
+│   ├── analysis/
+│   │   ├── joint_analysis.py
+│   │   └── temporal.py
+│   └── pipeline.py          # end‑to‑end orchestration
+└── notebooks/
+    └── exploratory_eda.ipynb
